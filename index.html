@@ -55,20 +55,21 @@
         <p>pedig saláta volt a királyuk</p>
         <p>Ha ezt a verset megfejted</p>
         <p>a meglepidet megleled.</p>
+        <p></p>
     </div>
 
-    <input type="text" id="guessInput" placeholder="Enter your guess..." />
-    <button onclick="checkGuess()">Submit Guess</button>
+    <input type="text" id="guessInput" placeholder="ide írd a tipped" />
+    <button onclick="checkGuess()">Tippelek</button>
 
     <script>
         // Function to check the user's guess
         function checkGuess() {
             var userGuess = document.getElementById('guessInput').value.trim().toLowerCase();
-            if (userGuess === "rome" || userGuess === "italy") {
+            if (userGuess === "rómaiak" || userGuess === "római") {
                 // Redirect to the "congratulations" page if the guess is correct
                 window.location.href = "congratulations.html";
             } else {
-                alert("Incorrect! Try again.");
+                alert("Nagyon nagy baj, próbáld újra!");
             }
         }
 
