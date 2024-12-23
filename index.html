@@ -8,6 +8,7 @@
         body {
             margin: 0;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -19,9 +20,41 @@
             color: black;
             text-align: center;
         }
+        input {
+            padding: 10px;
+            font-size: 1.5rem;
+            margin: 20px;
+            width: 250px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1.5rem;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
     <h1>Guess what?</h1>
+    <input type="text" id="guessInput" placeholder="Enter your guess..." />
+    <button onclick="checkGuess()">Submit Guess</button>
+
+    <script>
+        function checkGuess() {
+            var userGuess = document.getElementById('guessInput').value.trim().toLowerCase();
+            if (userGuess === "rome" || userGuess === "italy") {
+                // Redirect to the "congratulations" page if the guess is correct
+                window.location.href = "congratulations.html";
+            } else {
+                alert("Incorrect! Try again.");
+            }
+        }
+    </script>
 </body>
 </html>
