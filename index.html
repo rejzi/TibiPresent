@@ -14,11 +14,16 @@
             height: 100vh;
             background-color: white;
             font-family: Arial, sans-serif;
+            text-align: center;
         }
         h1 {
-            font-size: 5rem;
+            font-size: 2rem;
             color: black;
-            text-align: center;
+        }
+        p {
+            font-size: 2rem;
+            color: black;
+            margin: 5px 0;
         }
         input {
             padding: 10px;
@@ -41,7 +46,17 @@
     </style>
 </head>
 <body>
-    <h1>Guess what?</h1>
+    <div>
+        <p>Volt egyszer egy birodalom</p>
+        <p>harcosaik csupa izom</p>
+        <p>Úthálózatuk messze terjed</p>
+        <p>ezen halad minden ezred</p>
+        <p>Betűinket tőlük kaptuk</p>
+        <p>pedig saláta volt a királyuk</p>
+        <p>Ha ezt a verset megfejted</p>
+        <p>a meglepidet megleled.</p>
+    </div>
+
     <input type="text" id="guessInput" placeholder="Enter your guess..." />
     <button onclick="checkGuess()">Submit Guess</button>
 
